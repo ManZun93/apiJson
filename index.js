@@ -32,9 +32,9 @@ app.put('/tasks', async (req, res) => {
 
   if (taskIndex >= 0) {
     tasksArray[taskIndex].status = status;
-    typeof status === "boolean" ? await fs.writeFile(jsonPath, JSON.stringify(tasksArray)) : console.log("valor invalido, utiliza solo true o false.");
+    typeof status === "boolean" ? await fs.writeFile(jsonPath, JSON.stringify(tasksArray))  : console.log("valor invalido, utiliza solo true o false.");
   }
-  res.send(typeof status === "boolean" ? "actualizado" : "valor invalido, utiliza solo true o false.");
+  res.send(typeof status === "boolean" ? "actualizado exitosamente" : "valor invalido, utiliza solo true o false.");
 });
 
 
